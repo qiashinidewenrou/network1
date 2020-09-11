@@ -1,0 +1,11 @@
+
+//执行插入图片
+void insertplayDialog::playPic(QString &path)
+{
+	QImage img; //新建一个image对象
+	img.load(path);
+
+	ui->preview_label->setPixmap(QPixmap::fromImage(img.scaled(ui->preview_label->size(), Qt::KeepAspectRatio)));
+	ui->preview_label->setScaledContents(true);
+
+}
